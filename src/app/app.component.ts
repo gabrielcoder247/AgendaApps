@@ -12,4 +12,13 @@ export class AppComponent {
     {time: '09:00', subject: 'Call with HRs'},
     {time: '12:00', subject: 'Lunch with Timmoty', location: 'Canteen', description: 'Project evalutation ile declaring a variable and using an if statement is a fine way to conditionally render a component, sometimes you might want to use a'},
   ];
+
+  deleteEvent(event: any) {
+    const itemIndex = this.events.findIndex(el => el === event);
+    this.events.splice(itemIndex, 1);
+  }
+
+  handleDeleteClick() {
+    console.log("Delete button clicked!");
+  }
 }

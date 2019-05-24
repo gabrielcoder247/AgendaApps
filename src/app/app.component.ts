@@ -18,7 +18,5 @@ export class AppComponent {
     this.events.splice(itemIndex, 1);
   }
 
-  handleDeleteClick() {
-    console.log("Delete button clicked!");
-  }
+
 }

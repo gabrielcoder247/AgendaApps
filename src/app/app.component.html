@@ -80,21 +80,74 @@
         </div>
   
         <!--Body-->
-        <div class="modal-body">
-          Modal Body
-        </div>
-  
+ 
+<!--Body-->
+<div class="modal-body">
+  <div class="md-form mb-5">
+    <mdb-icon far icon="clock"></mdb-icon>
+    <input
+      type="text"
+      id="time"
+      class="form-control"
+      mdbInput
+      [formControl]="timeInput"
+    />
+    <label for="time">Time</label>
+  </div>
+
+  <div class="md-form">
+    <mdb-icon fas icon="edit"></mdb-icon>
+    <input
+      type="text"
+      id="subject"
+      class="form-control"
+      mdbInput
+      [formControl]="subjectInput"
+    />
+    <label for="subject">Subject</label>
+  </div>
+
+  <div class="md-form mb-5">
+    <mdb-icon far icon="map"></mdb-icon>
+    <input
+      type="text"
+      id="location"
+      class="form-control"
+      mdbInput
+      [formControl]="locationInput"
+    />
+    <label for="location">Location (optional) </label>
+  </div>
+
+  <div class="md-form">
+    <mdb-icon fas icon="sticky-note"></mdb-icon>
+
+    <input
+      type="text"
+      id="description"
+      class="form-control"
+      mdbInput
+      [formControl]="descriptionInput"
+    />
+    <label for="description">Description (optional) </label>
+  </div>
+</div>
+<!--/.Body-->
+ 
+  <!--/.Body-->
         <!--Footer-->
         <div class="modal-footer justify-content-center">
-          <button
-            type="button"
-            mdbBtn
-            color="info"
-            class="waves-effect"
-            mdbWavesEffect
-          >
-            Add
-          </button>
+          <!-- <button> -->
+                <button
+        type="button"
+        mdbBtn
+        color="info"
+        class="waves-effect"
+        (click)="addNewEvent()"
+        mdbWavesEffect>
+        Add
+      </button>
+      <!-- </button> -->
         </div>
         <!--Footer-->
       </div>

@@ -6,6 +6,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { EventComponent } from './components/event/event.component'
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ScheduleItemComponent } from './schedule-item/schedule-item.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { ScheduleItemComponent } from './schedule-item/schedule-item.component';
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent],
